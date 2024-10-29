@@ -151,10 +151,17 @@ store the flakes whose sum are same into a kind of linked list and only compare 
 
 /*
 Finally the time
+without compiler optimizations
 snowflakes | time (s)
 1000       | 0.00
 10000      | 0.03
 100000     | 0.38
+
+with compiler optimizations (O4)
+snowflakes | time (s)
+1000       | 0.00
+10000      | 0.01
+100000     | 0.07
 */
 fn void search_twin(SFNode*[] nodes) {
     for (int i=0; i<nodes.len; i++) {
